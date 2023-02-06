@@ -1,0 +1,23 @@
+CREATE TABLE Chocolate_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO Chocolate_store VALUES (1, 'alfajor', 60, 1, 1);
+INSERT INTO Chocolate_store VALUES (2, 'bombones', 80, 3, 0.75);
+INSERT INTO Chocolate_store VALUES (3, 'besitos', 65, 2, 0.20);
+INSERT INTO Chocolate_store VALUES (4, 'tres leches', 25, 1, 1.50);
+INSERT INTO Chocolate_store VALUES (5, 'cuatro leches', 12, 3, 2);
+INSERT INTO Chocolate_store VALUES (6, 'flan de leche', 10, 3, 1.25);
+INSERT INTO Chocolate_store VALUES (7, 'galleta de chocolate', 28, 2, 0.30);
+INSERT INTO Chocolate_store VALUES (8, 'cafe', 15, 2, 4);
+INSERT INTO Chocolate_store VALUES (9, 'humita', 20, 1, 5);
+INSERT INTO Chocolate_store VALUES (10, 'empanadas de carne', 8, 2, 2.50);
+INSERT INTO Chocolate_store VALUES (11, 'empanadas de queso', 15, 1, 2.10);
+INSERT INTO Chocolate_store VALUES (12, 'pasteles de carne', 7, 2, 1);
+INSERT INTO Chocolate_store VALUES (13, 'muchin', 13, 3, 1.25);
+INSERT INTO Chocolate_store VALUES (14, 'churros', 28, 1, 0.80);
+INSERT INTO Chocolate_store VALUES (15, 'bollos', 21, 2, 3);
+
+**display items by price 
+SELECT * FROM Chocolate_store ORDER BY price;
+
+**display items where price is the highest and by aisle
+SELECT aisle, MAX(price) FROM Chocolate_store GROUP BY aisle;
